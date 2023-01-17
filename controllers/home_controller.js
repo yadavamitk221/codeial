@@ -1,3 +1,7 @@
 module.exports.home = function(req, res){
-    return res.end("<H1>Express Router is Running</H1>");
+    console.log(req.cookies);   
+    res.cookie('user_id', 100);
+    return res.render('home', {
+        title: "Codeal"
+    });
 }
