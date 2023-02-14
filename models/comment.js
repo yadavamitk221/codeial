@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const User = require('./user');
-const Posts = require('./posts')
+const Posts = require('./posts');
+const Like = require('./like');
 
 const commentSchema = new mongoose.Schema({
     content: {
@@ -14,7 +15,12 @@ const commentSchema = new mongoose.Schema({
     post: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Posts"
-    }
+    },
+    like: [ {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Like'
+        }
+    ]
 },{
     timestamps: true
 });

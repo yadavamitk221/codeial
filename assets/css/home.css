@@ -1,2 +1,9 @@
-body {
-  background-color: lightgreen; }
+#main-container {
+  display: flex; }
+  #main-container #feed-posts {
+    width: 70%;
+    padding: 10px; }
+  #main-container #user_frineds {
+    width: 30%;
+    padding: 10px;
+    border-left: 1px solid black; }

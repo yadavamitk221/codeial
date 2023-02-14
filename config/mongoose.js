@@ -8,4 +8,4 @@ db.on('err', console.error.bind(console, "Error in connecting to the database"))
 
 db.once("open", function(){
     console.log("Connected to database :: Mongodb");
-})
+});
